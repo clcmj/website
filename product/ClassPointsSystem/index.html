@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>班级积分乐园 🌟</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
+</head>
+<body>
+    <div class="header">🍭 班级积分系统 🍬</div>
+
+    <div class="controls-section">
+        <div class="control-group">
+            <div class="control-header">
+                <h3>👨🏫 全班操作：</h3>
+                <div class="control-content">
+                    <input type="number" id="batchAmount" placeholder="输入分数" style="width:100px">
+                    <button onclick="batchAdd()" class="plus-btn">➕ 全员加分</button>
+                    <button onclick="batchSubtract()" class="minus-btn">➖ 全员减分</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="control-group">
+            <div class="control-header">
+                <h3>🎒 学生管理：</h3>
+                <div class="control-content">
+                    <input type="number" id="newId" placeholder="学号" min="1">
+                    <input type="text" id="newName" placeholder="姓名">
+                    <button onclick="addStudent()" class="add-btn">✨ 添加学生</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <div class="control-header">
+                <h3>💾 数据管理：</h3>
+                <div class="control-content">
+                    <button onclick="exportData()" class="add-btn">💾 导出到Excel</button>
+                    <input type="file" id="dbFile" accept=".csv" style="display:none" onchange="importFromCSV(event)">
+                    <button onclick="document.getElementById('dbFile').click()" class="add-btn">📥 从Excel导入</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="left-content">
+            <div class="container" id="studentContainer"></div>
+        </div>
+
+        <div class="right-panel">
+            <div class="ranking-section">
+                <h3>🏆 班级排行榜</h3>
+                <div id="rankingList"></div>
+            </div>
+
+            <div class="prize-section">
+                <h3>🎁 奖品商店</h3>
+                <input type="text" id="prizeName" placeholder="奖品名称">
+                <input type="number" id="prizeCost" placeholder="所需兑换币" min="1">
+                <button onclick="addPrize()" class="add-btn">➕ 添加奖品</button>
+                <div id="prizeList" style="margin-top:15px"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="db.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

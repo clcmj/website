@@ -1,0 +1,58 @@
+{
+    "name": "HTML5 Local App",
+    "description": "Rules for a pure HTML5 application that runs locally",
+    "rules": [
+        {
+            "name": "HTML文件",
+            "pattern": ".*\\.html$",
+            "autoformat": true,
+            "language": "html"
+        },
+        {
+            "name": "JavaScript文件",
+            "pattern": ".*\\.js$",
+            "autoformat": true,
+            "language": "javascript"
+        },
+        {
+            "name": "CSS文件",
+            "pattern": ".*\\.css$",
+            "autoformat": true,
+            "language": "css"
+        },
+        {
+            "name": "图片文件",
+            "pattern": ".*\\.(png|jpg|jpeg|gif|svg)$",
+            "binary": true
+        },
+        {
+            "name": "字体文件",
+            "pattern": ".*\\.(woff|woff2|ttf|eot)$",
+            "binary": true
+        },
+        {
+            "name": "音频文件",
+            "pattern": ".*\\.(mp3|wav|ogg)$",
+            "binary": true
+        },
+        {
+            "name": "视频文件",
+            "pattern": ".*\\.(mp4|webm)$",
+            "binary": true
+        }
+    ],
+    "ignorePatterns": [
+        "node_modules",
+        "dist",
+        "build",
+        ".git",
+        ".DS_Store",
+        "*.log"
+    ],
+    "formatOptions": {
+        "indentSize": 2,
+        "useTabs": false,
+        "lineEnding": "lf"
+    }
+}
+    

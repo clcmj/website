@@ -1,0 +1,170 @@
+body {
+    font-family: 'Comic Sans MS', cursive;
+    background: #f0f9ff;
+    padding: 20px;
+    margin: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+.student-card {
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    border: 3px solid #a8d8ff;
+    transition: all 0.3s ease;
+}
+.student-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.controls {
+    margin: 20px 0;
+    padding: 15px;
+    background: #fff3d6;
+    border-radius: 10px;
+}
+button {
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.add-btn { background: #ffd700; }
+.plus-btn { background: #90EE90; }
+.minus-btn { background: #FFB6C1; }
+.delete-btn { background: #ff6347; color: white; }
+.header {
+    text-align: center;
+    color: #ff69b4;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+input {
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid #a8d8ff;
+    margin: 5px;
+}
+.controls-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    margin: 20px;
+}
+.control-group {
+    flex: 1;
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.control-group h3 {
+    margin: 0;
+    color: #666;
+}
+.control-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 32px;
+}
+.control-header h3 {
+    margin: 0;
+    color: #333;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+.control-content {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 100%;
+}
+/* 缩小输入框尺寸 */
+.control-content input[type="number"],
+.control-content input[type="text"] {
+    width: 60px;
+    padding: 4px;
+    font-size: 0.9em;
+}
+/* 缩小按钮尺寸 */
+.control-content button {
+    padding: 4px 8px;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+.main-container {
+    display: flex;
+    gap: 20px;
+}
+.left-content {
+    flex: 1;
+    padding-right: 10px;
+}
+.right-panel {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.ranking-section {
+    background: #fff0f5;
+    padding: 15px;
+    border-radius: 15px;
+    height: fit-content;
+}
+.ranking-section h3 {
+    color: #ff69b4;
+    text-align: center;
+    margin-bottom: 15px;
+}
+#rankingList .rank-item {
+    background: white;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+#rankingList .rank-item:hover {
+    transform: translateX(5px);
+    background: #fff5f8;
+}
+#rankingList .rank-item .rank {
+    font-weight: bold;
+    color: #ff69b4;
+}
+/* 前三名特殊样式 */
+#rankingList .rank-item:nth-child(1) .rank { color: gold; }
+#rankingList .rank-item:nth-child(2) .rank { color: silver; }
+#rankingList .rank-item:nth-child(3) .rank { color: #cd7f32; }
+.prize-section {
+    background: #fff0f5;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 0;
+}
+/* 优化按钮悬停效果 */
+button:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+} 
