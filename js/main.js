@@ -4,7 +4,7 @@ const products = [
         name: "班级积分管理系统",
         description: "一个简单易用的班级积分管理工具，帮助教师轻松管理学生积分",
         image: "assets/images/class-points-system.png",
-        link: "product/ClassPointsSystem/index.html"
+        link: "./product/ClassPointsSystem/index.html"
     }
 ];
 
